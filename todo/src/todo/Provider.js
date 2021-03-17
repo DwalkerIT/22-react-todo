@@ -16,6 +16,10 @@ const { Provider } = store;
 
 const id = () => Math.random().toString() + Math.random().toString();
 
+function removeById(arr, id) {
+  return arr.filter((item) => item.id !== id);
+}
+
 // function id() {
 //   return Math.floor(Math.random() * 100);
 // }
@@ -41,7 +45,7 @@ function todoReducer(state, action) {
       const newTodos = state.todos.filter((todo) =>
         todo.id == idToRemove ? false : true
       );
-      return { ...state, todos: newTodos };
+      return { ...state, todos: removeById(state.todos, idToRemove) };
 
     case "INCREMENT":
       return { ...state, count: state.count + 1 };
