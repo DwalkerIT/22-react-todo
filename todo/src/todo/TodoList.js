@@ -10,6 +10,7 @@ export default function TodoList(props) {
         return (
           <li key={todo.id}>
             <input
+              className="checkbox"
               type="checkbox"
               checked={todo.isComplete}
               onChange={() =>

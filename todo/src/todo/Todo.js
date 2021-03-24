@@ -21,7 +21,7 @@ export default function Todo() {
 
   return (
     <div>
-      <h1 classname="banner">TO DO'S </h1>
+      <h1 className="banner">TO DOS </h1>
       {count}
       <button onClick={() => dispatch({ type: "DELETE_TODO", payload: 1 })}>
         Delete Todo
