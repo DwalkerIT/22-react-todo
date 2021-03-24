@@ -8,7 +8,7 @@ export default function TodoList(props) {
     <ul>
       {props.todos.map((todo) => {
         return (
-          <li key={todo.id}>
+          <li className="todoItem" key={todo.id}>
             <input
               className="checkbox"
               type="checkbox"
@@ -17,7 +17,10 @@ export default function TodoList(props) {
                 dispatch({ type: "TOGGLE_STATUS", payload: todo.id })
               }
             />
-            {todo.description}
+            <span className={todo.isComplete == true ? "description" : ""}>
+              {todo.description}
+            </span>
+
             <span
               className="delete"
               onClick={() =>

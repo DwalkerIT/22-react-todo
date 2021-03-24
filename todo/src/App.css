@@ -1,6 +1,13 @@
 /* . is for class */
 /* # is for id */
 * {
+  /* background-color: rgb(156, 160, 165); */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
   background-color: rgb(156, 160, 165);
 }
 
@@ -16,12 +23,19 @@ button {
 
 input {
   height: 30px;
-  width: 600px;
-  border-radius: 10px;
+
+  /* border-radius: 10px; */
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 5px;
+}
+input:focus {
+  outline: none;
 }
 
 .delete {
-  padding-left: 20px;
+  padding-right: 30px;
 }
 
 .banner {
@@ -31,6 +45,33 @@ input {
   color: peru;
 }
 
-.checkbox {
+/* .checkbox {
   display: flex;
+
+} */
+
+.description {
+  text-decoration: line-through;
+}
+
+.todoItem {
+  /* width: 40%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid lightgray;
+  background-color: whitesmoke;
+}
+
+.container {
+  width: 50%;
+  -webkit-box-shadow: 3px 5px 15px 3px #000000;
+  box-shadow: 3px 5px 15px 3px #000000;
+  margin: 0 auto;
+}
+
+.search-bar {
+  width: 100%;
+  /* -webkit-box-shadow: 3px 5px 15px 3px #000000;
+  box-shadow: 3px 5px 15px 3px #000000; */
 }

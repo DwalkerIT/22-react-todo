@@ -2,8 +2,8 @@ import { createContext, useReducer } from "react";
 
 const initialState = {
   todos: [
-    { id: 1, description: "item 1" },
-    { id: 2, description: "item 2" },
+    // { id: 1, description: "" },
+    // { id: 2, description: "item 2" },
   ],
   count: 0,
   banana: false,

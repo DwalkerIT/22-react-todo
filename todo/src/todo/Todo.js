@@ -20,9 +20,11 @@ export default function Todo() {
   }
 
   return (
-    <div>
+    <>
       <h1 className="banner">TO DOS </h1>
-      {count}
+
+      <div className="container">
+        {/* {count}
       <button onClick={() => dispatch({ type: "DELETE_TODO", payload: 1 })}>
         Delete Todo
       </button>
@@ -31,16 +33,18 @@ export default function Todo() {
       >
         Increment
       </button>
-      <button onClick={() => dispatch({ type: "DECREMENT" })}>Decrement</button>
+      <button onClick={() => dispatch({ type: "DECREMENT" })}>Decrement</button> */}
 
-      <form action="" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-      </form>
-      <TodoList todos={todos}></TodoList>
-    </div>
+        <form action="" onSubmit={handleSubmit}>
+          <input
+            className="search-bar"
+            type="text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        </form>
+        <TodoList todos={todos}></TodoList>
+      </div>
+    </>
   );
 }
