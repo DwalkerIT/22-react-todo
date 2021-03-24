@@ -18,6 +18,7 @@ export default function TodoList(props) {
             />
             {todo.description}
             <span
+              className="delete"
               onClick={() =>
                 dispatch({ type: "DELETE_TODO", payload: todo.id })
               }

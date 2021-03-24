@@ -49,8 +49,7 @@ function todoReducer(state, action) {
 
     case "INCREMENT":
       return { ...state, count: state.count + 1 };
-    default:
-      throw new Error();
+
     case "TOGGLE_STATUS":
       const transfromedTodos = state.todos.map((todo) => {
         const todoToToggleId = action.payload;
